@@ -25,28 +25,28 @@
       <!-- Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary -->
       <div class="slider">
           <div class="slider-steps step1">
-            <button class="slider-buttons slider-button-1">1</button>
+            <button class="slider-buttons slider-button-1 active" id ="step1">1</button>
             <div class="slider-steps-main">
               <span>STEP 1</span>
               <h3>YOUR INFO</h3>
             </div>
           </div>
-          <div class="slider-steps step2">
-            <button class="slider-buttons slider-button-2">2</button>
+          <div class="slider-steps step2" >
+            <button class="slider-buttons slider-button-2" id ="step2">2</button>
             <div class="slider-steps-main">
               <span>STEP 2</span>
               <h3>SELECT PLAN</h3>
             </div>
           </div>
           <div class="slider-steps step3">
-            <button class="slider-buttons slider-button-3">3</button>
+            <button class="slider-buttons slider-button-3"  id ="step3">3</button>
             <div class="slider-steps-main">
               <span>STEP 3</span>
               <h3>ADD-ONS</h3>
             </div>
           </div>          
           <div class="slider-steps step4">
-            <button class="slider-buttons slider-button-4">4</button>
+            <button class="slider-buttons slider-button-4" id ="step4">4</button>
             <div class="slider-steps-main">
               <span>STEP 4</span>
               <h3>SUMMARY</h3>
@@ -59,27 +59,30 @@
       <!-- Step 1 start -->
 
       <div class="main">
-        <h1>Personal info </h1>
-        <span>Please provide your name, email address, and phone number.</span>
-        <div class="personal-buttons">
-          <div class="name">
-            <label for="">Name
-                <input type="text">
-             </label>
-          </div> 
-          <div class="email-address">
-            <label for="">Email
-                <input type="text">
-             </label>
-          </div> 
-          <div class="phone">
-            <label for="">Phone
-                <input type="text">
-             </label>
-          </div> 
-        </div>
-        <div class="personal-next-button">
-          <button>Next Step</button>
+        <div class="main-container">
+          <h1 id = "mainHeading">Personal info </h1>
+          <span id = "mainspan">Please provide your name, email address, and phone number.</span>
+          <div class="main-buttons">
+            <div class="main-info name">
+              <label for="">Name
+                  <input type="text" placeholder="e.g Vanessa Mint">
+               </label>
+            </div> 
+            <div class="main-info  email-address">
+              <label for="">Email
+                  <input type="text"  placeholder="e.g abc@gmail.com">
+               </label>
+            </div> 
+            <div class="main-info  phone">
+              <span></span>
+              <label for="">Phone Number
+                  <input type="text" placeholder="e.g +1 234 567 890">
+               </label>
+            </div> 
+          </div>
+          <div class="main-next-button">
+            <button id =  "next">Next Step</button>
+          </div>
         </div>
       </div>
 
@@ -95,7 +98,7 @@
       
       <!-- Step 3 start -->
       
-      <!-- Pick add-ons Add-ons help enhance your gaming experience. Online service
+      <!-- Pick add-ons  Online service
         Access to multiplayer games +$1/mo Larger storage Extra 1TB of cloud save
         +$2/mo Customizable Profile Custom theme on your profile +$2/mo Go Back Next
         Step -->
@@ -120,6 +123,7 @@
     
     <!-- Step 5 end -->
     </div>
+    <script src="app.js"></script>
   </body>
   </html>
   
