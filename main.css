@@ -409,7 +409,7 @@ body{
         padding: 0;
         display: block;
         width: 100%;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
     .container{
         flex-direction: column;
@@ -460,7 +460,7 @@ body{
         font-size: 15px; 
     }
     .main3{
-        gap:0.5rem;
+        gap:0.3rem;
     }
     .main3-card > div > h3{
         font-size: 15px;
