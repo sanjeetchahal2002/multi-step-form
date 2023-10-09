@@ -53,9 +53,9 @@ Here are some key customization options you can consider:
 - **Styling**: Adjust the CSS in the `main.css` file to match your project's branding and design guidelines.
 
 
-## Deploying your project
+## Project Deploy
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+Our Project is hosted on:
 
 - [GitHub Pages](https://sanjeetchahal2002.github.io/multi-step-form/)
 - [Vercel](https://multi-step-form-topaz-three.vercel.app/)
