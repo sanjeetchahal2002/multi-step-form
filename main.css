@@ -409,7 +409,7 @@ body{
         padding: 0;
         display: block;
         width: 100%;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .container{
         flex-direction: column;
@@ -438,23 +438,24 @@ body{
         padding: 2rem;
         border-radius: 12px;
         width:90%;
-        height: 80%;
+        height: 68%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .main-container > h1{
         font-size: 30px;
         box-shadow: 1p;
     }
-    /* .main-next-button{ 
+    .main-next-button{ 
          position: absolute;
-        bottom: -%;
+        bottom: -22%;
         left: -5%;
-        padding-top: 3%;
+        padding: 3%;
         height: max-content; 
         width: 110%;
         align-items: flex-end;
         background-color: hsl(0, 0%, 100%); 
-    }   */
+        /* background-color: aquamarine; */
+    }  
     .main2-card > h3{
         font-size: 15px; 
     }
@@ -469,7 +470,7 @@ body{
     }
     .main3-card{
         width: 210%;
-        padding-bottom: 10%;
+        padding-bottom: 12%;
     }
     .thankuPage > div >  h1{
         font-size: 25px;
