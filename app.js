@@ -162,6 +162,7 @@ function changeHTML2(){
             div.appendChild(createCard('./assets/images/icon-advanced.svg','Advanced','120/yr',true))
             div.appendChild(createCard('./assets/images/icon-pro.svg','Pro','150/yr',true))
         }else{
+            div.innerHTML = ""
             div.appendChild(createCard('./assets/images/icon-arcade.svg','Arcade','9/mo',false))
             div.appendChild(createCard('./assets/images/icon-advanced.svg','Advanced','12/mo',false))
             div.appendChild(createCard('./assets/images/icon-pro.svg','Pro','15/mo',false))
@@ -265,6 +266,9 @@ function FinishingUp(){
         }
         h3.textContent = `${planname}(Yearly)`
     }else{
+        if(planCost>=90){
+            planCost /=10;
+        }
         h3.textContent = `${planname}(Monthly)`
     }
     
