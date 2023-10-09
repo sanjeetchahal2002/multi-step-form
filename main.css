@@ -365,10 +365,6 @@ body{
     font-weight: 700;
     font-size: 20px;
 }
-/* .ConfirmButtonHover :hover{
-    background-color: hsl(243, 100%, 62%);
-} */
-
 
 .thankuPage{
     display: flex;
@@ -449,8 +445,7 @@ body{
         font-size: 30px;
         box-shadow: 1p;
     }
-    
-      /* .main-next-button{ 
+    /* .main-next-button{ 
          position: absolute;
         bottom: -%;
         left: -5%;
