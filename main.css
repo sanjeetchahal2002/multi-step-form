@@ -413,6 +413,7 @@ body{
         padding: 0;
         display: block;
         width: 100%;
+        overflow-x: hidden;
     }
     .container{
         flex-direction: column;
@@ -441,14 +442,14 @@ body{
         padding: 2rem;
         border-radius: 12px;
         width:90%;
-        height: 60%;
+        height: 63%;
     }
     .main-container > h1{
         font-size: 30px;
     }
     .main-next-button{
         position: absolute;
-        bottom: -38%;
+        bottom: -31%;
         left: -5%;
         padding-top: 3%;
         height: max-content; 
