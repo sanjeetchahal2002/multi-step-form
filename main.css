@@ -454,7 +454,6 @@ body{
         width: 110%;
         align-items: flex-end;
         background-color: hsl(0, 0%, 100%); 
-        /* background-color: aquamarine; */
     }  
     .main2-card > h3{
         font-size: 15px; 

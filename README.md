@@ -1,64 +1,66 @@
-## Welcome! 👋
+# MultiStep Form 
 
-Thanks for checking out this front-end coding challenge.
+This project is a multi-step form implemented using HTML, CSS, and JavaScript DOM. A multi-step form is an efficient way to break down a lengthy form into smaller, more manageable sections, making it easier for users to complete. This README file provides an overview of the project, its structure, and how to use and customize it.
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+## Project Structure
 
-## The challenge
+The project is organized into the following main files and directories:
 
-Your challenge is to build out this multi-step form and get it looking as close to the design as possible.
+1. **index.html**: This file contains the HTML structure of the multi-step form. It defines the form elements, including input fields and buttons.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+2. **main.css**: The CSS file is responsible for styling the form. It ensures that the form looks visually appealing and is responsive.
 
-Your users should be able to:
+3. **app.js**: This JavaScript file contains the logic for implementing the multi-step functionality. It handles the transitions between steps, form validation, and submission.
 
-- Complete each step of the sequence
-- Go back to a previous step to update their selections
-- See a summary of their selections on the final step and confirm their order
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- Receive form validation messages if:
-  - A field has been missed
-  - The email address is not formatted correctly
-  - A step is submitted, but no selection has been made
+4. **/assets/images/**: This directory contains any images or icons used in the form, such as background images or icons for form elements.
 
-## Where to find everything
+5. **/assets/fonts/**: This directory contains custom fonts used in the project.
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+## How to Use
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+To use the multi-step form in your project, follow these steps:
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+1. Clone or download the project repository to your local machine.
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+2. Open the project directory in your code editor.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+3. Customize the form fields and steps as needed. You can add or remove steps, change the input fields, and update the form validation rules in the `app.js` file.
 
-## Building your project
+4. Customize the styling by modifying the CSS in the `main.css` file. You can change colors, fonts, spacing, and layout to match your project's design.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+5. Test the form by opening the `index.html` file in a web browser. Ensure that the form functions as expected and that the styling is consistent with your design.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+6. Once you are satisfied with the form and its functionality, integrate it into your project by copying the HTML, CSS, and JavaScript code into the relevant parts of your application.
+
+7. If you have custom fonts in the `fonts/` directory, make sure to include them in your project by linking to them in your CSS file. You can use the `@font-face` rule to define custom fonts.
+
+   Example:
+   ```css
+   @font-face {
+     font-family: 'CustomFont';
+     src: url('fonts/your-custom-font.woff2') format('woff2'),
+          url('fonts/your-custom-font.woff') format('woff');
+   }
+
+## Customization
+
+Here are some key customization options you can consider:
+
+- **Form Fields**: Modify the input fields in the `index.html` file to collect the specific information you need from users.
+
+- **Validation Rules**: Customize the form validation rules in the `app.js` file to ensure that user input is accurate and complete.
+
+- **Styling**: Adjust the CSS in the `main.css` file to match your project's branding and design guidelines.
+
 
 ## Deploying your project
 
 As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- [GitHub Pages](https://sanjeetchahal2002.github.io/multi-step-form/)
+- [Vercel](https://multi-step-form-topaz-three.vercel.app/)
 
-## Create a custom `README.md`
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-**Have fun building!** 🚀
