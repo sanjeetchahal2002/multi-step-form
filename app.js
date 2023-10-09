@@ -21,60 +21,60 @@ const phone = document.getElementById('phone')
 
 // Step 1
 
+function checkName() {
+    let patternN = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/; 
+
+    let errorTxt = document.querySelector(".NameError");
+    if (!Name.value.match(patternN)) { 
+        Name.style.border = '1px solid red';
+        (Name.value != "") ? errorTxt.innerText = "Not valid" : errorTxt.innerText = "This field is required";
+    }else{
+        Name.style.border = '1px solid hsl(229, 24%, 87%)';
+        errorTxt.innerText =""
+        return true;
+    }    
+}
+
+function checkEmail() {
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+    let errorTxt = document.querySelector(".Emailerror");
+    if (!email.value.match(pattern)) {
+        email.style.border = '1px solid red'; 
+        (email.value != "") ? errorTxt.innerText = "Not valid" : errorTxt.innerText = "This field is required";
+    }else{
+        email.style.border = '1px solid hsl(229, 24%, 87%)';
+        errorTxt.innerText =""
+        return true;
+    }    
+}
+
+function checkPhone() {
+    let pattern = /^[2-9]\d{2}[2-9]\d{2}\d{4}$/;
+    let errorTxt = document.querySelector(".PhoneError");
+    if (!phone.value.match(pattern)) { 
+        phone.style.border = '1px solid red'; 
+        (phone.value != "") ? errorTxt.innerText = "Not valid" : errorTxt.innerText = "This field is required";
+    }else{
+        phone.style.border = '1px solid hsl(229, 24%, 87%)';
+        errorTxt.innerText =""
+        return true;
+    }    
+}
+
 function validate(){
     checkName(); 
     checkEmail(); 
     checkPhone();
-    
-    function checkName() {
-        let patternN = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/; 
-
-        let errorTxt = document.querySelector(".NameError");
-        if (!Name.value.match(patternN)) { 
-            Name.style.border = '1px solid red';
-            (Name.value != "") ? errorTxt.innerText = "Not valid" : errorTxt.innerText = "This field is required";
-        }else{
-            Name.style.border = '1px solid hsl(229, 24%, 87%)';
-            errorTxt.innerText =""
-            return true;
-        }    
-    }
-    
-    function checkEmail() {
-        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
-        let errorTxt = document.querySelector(".Emailerror");
-        if (!email.value.match(pattern)) {
-            email.style.border = '1px solid red'; 
-            (email.value != "") ? errorTxt.innerText = "Not valid" : errorTxt.innerText = "This field is required";
-        }else{
-            email.style.border = '1px solid hsl(229, 24%, 87%)';
-            errorTxt.innerText =""
-            return true;
-        }    
-    }
-    
-    function checkPhone() {
-        let pattern = /^[2-9]\d{2}[2-9]\d{2}\d{4}$/;
-        let errorTxt = document.querySelector(".PhoneError");
-        if (!phone.value.match(pattern)) { 
-            phone.style.border = '1px solid red'; 
-            (phone.value != "") ? errorTxt.innerText = "Not valid" : errorTxt.innerText = "This field is required";
-        }else{
-            phone.style.border = '1px solid hsl(229, 24%, 87%)';
-            errorTxt.innerText =""
-            return true;
-        }    
-    }
-    
-    
     return checkName() && checkEmail() && checkPhone() ;
 }
+
 
 // Step 2
 
 function createCard(imgSrc,h3Content,number,isYearly){
     const div = document.createElement('div')
     const img = document.createElement('img')
+    const divRight = document.createElement('div')
     const h3 = document.createElement('h3')
     const span = document.createElement('span')
     div.classList.add('main2-card')
@@ -83,14 +83,15 @@ function createCard(imgSrc,h3Content,number,isYearly){
     span.innerText = `$${number}`
     span.classList.add('card-price')
     div.appendChild(img);
-    div.appendChild(h3)
-    div.appendChild(span)
+    divRight.appendChild(h3)
+    divRight.appendChild(span)
+    div.append(divRight)
     if(isYearly){
         isYearlyAdds = true;
         const spanY = document.createElement('span')
         spanY.classList.add('monthFree')
         spanY.innerText = '2 months free'
-        div.appendChild(spanY)
+        divRight.appendChild(spanY)
     }
     isYearlyAdds = isYearly
     return div;
