@@ -128,9 +128,6 @@ function changeHTML2(){
     if(planname === ""){
         planname = "Arcade"
         planCost = 9
-        if(isYearlyAdds){
-            planCost*=10;
-        }
         selectedPlan = div.childNodes[0]; 
         div.childNodes[0].classList.add('active')  
     }
@@ -158,7 +155,6 @@ function changeHTML2(){
         }
         planCost = Number(planCost)
     })
-    
     document.getElementsByClassName('switch')[0].children[0].addEventListener('click',(e) =>{
         if(e.target.checked){
             div.innerHTML = ""
@@ -166,7 +162,6 @@ function changeHTML2(){
             div.appendChild(createCard('./assets/images/icon-advanced.svg','Advanced','120/yr',true))
             div.appendChild(createCard('./assets/images/icon-pro.svg','Pro','150/yr',true))
         }else{
-            div.innerHTML = ""
             div.appendChild(createCard('./assets/images/icon-arcade.svg','Arcade','9/mo',false))
             div.appendChild(createCard('./assets/images/icon-advanced.svg','Advanced','12/mo',false))
             div.appendChild(createCard('./assets/images/icon-pro.svg','Pro','15/mo',false))
@@ -265,6 +260,9 @@ function FinishingUp(){
     button.id = 'change'
     
     if(isYearlyAdds){
+        if(planCost<90){
+            planCost *=10;
+        }
         h3.textContent = `${planname}(Yearly)`
     }else{
         h3.textContent = `${planname}(Monthly)`
