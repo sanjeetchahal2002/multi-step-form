@@ -5,17 +5,33 @@
     font-family: 'Inter', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
+:root{
+    font-size: 16px;
+    /* colors */
+    --marine-blue:hsl(213, 96%, 18%);
+    --m-blue:hsl(213, 53%, 40%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --purplish-blue-lg: hsl(243, 100%, 71%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-color:hsl(229, 24%, 87%);
+    background-color:var(--light-gray);
 }
 .container{
     display: flex;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--white);
     height: 80%;
     width: 80%;
     padding: 1rem;
@@ -60,7 +76,7 @@ body{
     align-items: flex-start;
 }
 .slider-steps-main>span{
-    color:  hsl(229, 24%, 87%);
+    color:  var(--light-gray);
     font-size: 15px;
     font-weight: 400;
 }
@@ -83,11 +99,11 @@ body{
     padding: 1.5%;
 }
 .main-container > h1{
-    color:hsl(213, 96%, 18%);
+    color:var(--marine-blue);
     margin-bottom: 2rem;
 }
 .main-container > span{
-    color:  hsl(231, 11%, 63%);
+    color:  var(--alabaster);
     text-wrap: wrap;
 }
 .main-info{
@@ -113,9 +129,9 @@ body{
 }
 .main-info>label>input{
     height: 50px;
-    border: 2px solid hsl(229, 24%, 87%);
+    border: 2px solid var(--light-gray);
     border-radius: 5px;
-    color: hsl(213, 96%, 18%);
+    color: var(--marine-blue);
     font-size: 20px;
     font-weight: 400;
     box-sizing: border-box;
@@ -126,7 +142,7 @@ body{
     flex-direction: column;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    color: hsl(213, 96%, 18%);
+    color: var(--marine-blue);
 }
 .main-next-button{
     display: flex;
@@ -135,7 +151,7 @@ body{
     width: 100%;
 }
 .main-next-button > button{
-    background-color: hsl(213, 96%, 18%);
+    background-color: var(--marine-blue);
     color: white;
     padding: 1rem;
     border: none;
@@ -146,7 +162,7 @@ body{
 #prev{
     background-color: white;
     width: 120px;
-    color:hsl(231, 11%, 63%);
+    color:var(--cool-gray);
     font-weight: 500;
     font-size: 15px;
 }
@@ -157,8 +173,8 @@ body{
 /* DOM */
 
 .active{
-    background-color: hsl(206, 94%, 87%);
-    color: hsl(213, 96%, 18%);
+    background-color: var(--light-blue);
+    color: var(--marine-blue);
 }
 
 .main2{
@@ -170,15 +186,15 @@ body{
     height: 12rem;
     display: flex;
     flex-direction: column;
-    border: 1px solid hsl(231, 11%, 63%);
+    border: 1px solid var(--alabaster);
     width: 7.8rem;
     justify-content: space-evenly;
     align-items: flex-start;
     border-radius: 12px;
 }
 .main2 :hover{
-    border:1px solid hsl(213, 96%, 18%);
-    background-color: hsl(206, 94%, 87%);
+    border:1px solid var(--marine-blue);
+    background-color: var(--light-blue);
 }
 .main2-card > img{
     pointer-events: none; 
@@ -188,7 +204,7 @@ body{
     pointer-events: none; 
 }
 .card-price{
-    color: hsl(231, 11%, 63%);
+    color: var(--cool-gray);
     pointer-events: none; 
 }
 .planMonthorYear{
@@ -197,17 +213,17 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:hsl(229, 24%, 87%);
+    background-color:var(--light-gray);
     border-radius: 15px;
     width: 90%;
     padding: 0.5rem;
-    color:hsl(231, 11%, 63%) ;
+    color:var(--cool-gray) ;
 }
 .monthFree{
     pointer-events: none; 
     font-size: 14px;
     font-weight: 400;
-    color: hsl(213, 96%, 18%);
+    color: var(--marine-blue);
 }
 .switch {
     position: relative;
@@ -228,7 +244,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsl(213, 96%, 18%);
+    background-color: var(--marine-blue);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 1rem;
@@ -275,7 +291,7 @@ body{
 .main3-card{
     height: 100px;
     display: flex;
-    border: 1px solid hsl(231, 11%, 63%);
+    border: 1px solid var(--cool-gray);
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -283,8 +299,8 @@ body{
 }
 
 .main3 :hover{
-    border:1px solid hsl(213, 96%, 18%);
-    background-color: hsl(206, 94%, 87%);
+    border:1px solid var(--marine-blue);
+    background-color: var(--light-blue);
 }
 
 .main3-card > span{
@@ -299,15 +315,15 @@ body{
     flex-direction: column; 
 }
 .AddOnsMessage{
-    color:hsl(231, 11%, 63%);
+    color:var(--cool-gray);
 }
 .AddOnsPrice{
-    color:hsl(243, 100%, 62%) ;
+    color:var(--purplish-blue) ;
 }
 
 .Pickonsactive{
-    border:  2px solid hsl(243, 100%, 62%);
-    background-color: hsl(206, 94%, 87%);
+    border:  2px solid var(--purplish-blue);
+    background-color: var(--light-blue);
 }
 
 
@@ -322,23 +338,23 @@ body{
     border-radius: 12px; 
     gap: 1rem;
     padding: 1rem;
-    background-color: hsl(217, 100%, 97%)
+    background-color: var(--magnolia)
 }
 .change-button{
     border: none;
     text-decoration: underline;
-    color:hsl(213, 96%, 18%) ;
+    color:var(--marine-blue) ;
     background-color: transparent;
 }
 .change-button:hover{
-    color:hsl(243, 100%, 62%) ;
+    color:var(--purplish-blue) ;
 }
 .finishingUp-Plan{
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 0.5rem;
-    border-bottom: 1px solid hsl(231, 11%, 63%);
+    border-bottom: 1px solid var(--cool-gray);
 }
 .summary-addons{
     display: flex;
@@ -346,7 +362,7 @@ body{
     align-items: center;
     width: 100%;
     gap: 5rem;
-    color: hsl(231, 11%, 63%);
+    color: var(--cool-gray);
 }
 .finishingUpTotal{
     display: flex;
@@ -355,18 +371,18 @@ body{
     padding-left: 1rem;
     padding-right: 1rem ;
     padding-top: 1rem ;
-    color: hsl(231, 11%, 63%);
+    color: var(--cool-gray);
 }
 .summary-addons-price{
-    color: hsl(213, 96%, 18%);
+    color: var(--marine-blue);
 }
 .totalCost{
-    color: hsl(243, 100%, 62%);
+    color: var(--purplish-blue);
     font-weight: 700;
     font-size: 20px;
 }
 /* .ConfirmButtonHover :hover{
-    background-color: hsl(243, 100%, 62%);
+    background-color: var(--purplish-blue);
 } */
 
 
@@ -385,7 +401,7 @@ body{
 .thankuPage > span{
     width: 75%;
     height:5rem;
-    color: hsl(231, 11%, 63%);
+    color: var(--cool-gray);
     text-align: center;
     font-size: 15px;
 }
@@ -420,7 +436,7 @@ body{
         padding: 0;
         width: 100%;
         height: 100%;
-        background-color:  hsl(229, 24%, 87%);
+        background-color:  var(--light-gray);
     }
     .slider{
         flex-direction: row;
@@ -438,7 +454,7 @@ body{
     .main-container{
         position: absolute;
         top:17%;
-        background-color: hsl(0, 0%, 100%);
+        background-color: var(--white);
         padding: 2rem;
         border-radius: 12px;
         width:90%;
@@ -455,7 +471,7 @@ body{
         height: max-content; 
         width: 110%;
         align-items: flex-end;
-        background-color: hsl(0, 0%, 100%); 
+        background-color: var(--white); 
     }
     .main2-card > h3{
         font-size: 15px; 
