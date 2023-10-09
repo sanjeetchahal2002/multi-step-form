@@ -463,11 +463,17 @@ body{
     .main3{
         gap:0.5rem;
     }
+    .main3-card > div > h3{
+        font-size: 15px;
+    }
+    .main3-card > span{
+        font-size: 13px;
+    }
     .main3-card{
         width: 210%;
         padding-bottom: 10%;
     }
-    .thankuPage > h1{
+    .thankuPage > div >  h1{
         font-size: 25px;
     }
     
