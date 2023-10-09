@@ -359,7 +359,6 @@ function changeHTML5(){
    
     const div = document.createElement('div')
     div.classList.add('thankuPage')
-    
     const img = document.createElement('img')
     const h1 = document.createElement('h1')
     const span = document.createElement('span')
@@ -372,7 +371,7 @@ function changeHTML5(){
     mainButtons.innerHTML = ""
     mainspan.innerHTML = ""
     mainHeading.innerHTML = ""
-    buttonsDiv.innerHTML = ""
+    buttonsDiv.classList.add('hidden')
     
     div.appendChild(img)
     div.appendChild(h1)
