@@ -457,6 +457,9 @@ body{
     .main-container > h1{
         font-size: 30px;
     }
+    .main-info>label>input{
+        font-size: 15px;
+    }
     .main-buttons{
         margin-top: 1rem;
         margin-bottom: 1rem;
