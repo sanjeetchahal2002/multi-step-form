@@ -86,6 +86,9 @@ body{
     color:hsl(213, 96%, 18%);
     margin-bottom: 2rem;
 }
+.main-container{
+    width: 80%;
+}
 .main-container > span{
     color:  hsl(231, 11%, 63%);
     text-wrap: wrap;
@@ -172,7 +175,7 @@ body{
     display: flex;
     flex-direction: column;
     border: 1px solid hsl(231, 11%, 63%);
-    width: 100%;
+    width: 33%;
     border-radius: 12px;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -465,6 +468,10 @@ body{
     .main2{
         flex-direction: column;
         gap:0.5rem;
+    }
+    .main2-card > div{
+        display: flex;
+        flex-direction: column;
     } 
     .main2-card > h3{
         font-size: 15px; 
@@ -474,7 +481,8 @@ body{
         justify-content: flex-start;
         align-items: flex-start;
         gap:0.5rem;
-        height: 5rem;
+        height: 6rem;
+        width: 100%;
         gap:2rem;
         padding-bottom: 0.5rem;
     }
