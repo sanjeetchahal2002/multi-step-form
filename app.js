@@ -19,10 +19,13 @@ const Name = document.getElementById('Name')
 const email = document.getElementById('email')
 const phone = document.getElementById('phone')
 
+// Step 1
+
 function validate(){
     checkName(); 
     checkEmail(); 
     checkPhone();
+    
     function checkName() {
         let patternN = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/; 
 
@@ -36,6 +39,7 @@ function validate(){
             return true;
         }    
     }
+    
     function checkEmail() {
         let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
         let errorTxt = document.querySelector(".Emailerror");
@@ -48,6 +52,7 @@ function validate(){
             return true;
         }    
     }
+    
     function checkPhone() {
         let pattern = /^[2-9]\d{2}[2-9]\d{2}\d{4}$/;
         let errorTxt = document.querySelector(".PhoneError");
@@ -60,8 +65,13 @@ function validate(){
             return true;
         }    
     }
+    
+    
     return checkName() && checkEmail() && checkPhone() ;
 }
+
+// Step 2
+
 function createCard(imgSrc,h3Content,number,isYearly){
     const div = document.createElement('div')
     const img = document.createElement('img')
@@ -87,6 +97,7 @@ function createCard(imgSrc,h3Content,number,isYearly){
 }
 
 function changeHTML2(){
+    
     step1.classList.remove('active')
     step2.classList.add('active')
     prevButton.classList.remove('visible')
@@ -110,7 +121,9 @@ function changeHTML2(){
     div2.classList.add('planMonthorYear')
     mainButtons.append(div)
     mainButtons.append(div2)
+    
     addOns = []
+    
     if(planname === ""){
         planname = "Arcade"
         planCost = 9
@@ -120,6 +133,7 @@ function changeHTML2(){
         selectedPlan = div.childNodes[0]; 
         div.childNodes[0].classList.add('active')  
     }
+    
     div.addEventListener('click',(e)=>{
         div.childNodes.forEach((element)=>{
             element.classList.remove('active')
@@ -143,6 +157,7 @@ function changeHTML2(){
         }
         planCost = Number(planCost)
     })
+    
     document.getElementsByClassName('switch')[0].children[0].addEventListener('click',(e) =>{
         if(e.target.checked){
             div.innerHTML = ""
@@ -158,6 +173,7 @@ function changeHTML2(){
     })
 }
 
+// Step 3
 
 function createAddOns(service,message,price){
     const div = document.createElement('div')
@@ -205,6 +221,7 @@ function changeHTML3(){
         div.appendChild(createAddOns('Larger storage','Extra 1 TB of cloud save','2/mo'))
         div.appendChild(createAddOns('Customizable Profile','Custom theme on your profile','2/mo'))
     }
+    
     div.addEventListener('click',(adds)=>{
         if(adds.target.checked){
             let addOnsName = adds.target.parentNode.childNodes[1].innerText
@@ -229,18 +246,23 @@ function changeHTML3(){
 
 }
 
+// Step 4
+
 function FinishingUp(){
     let totalCost = 0;
+    
     const card = document.createElement('div') 
     const div = document.createElement('div')
     const divPlan = document.createElement('div')
     const button = document.createElement('button')
     const h3 = document.createElement('h3')
     const costh3 = document.createElement('h3')
+    
     card.classList.add('main4-card')
     button.innerText = 'Change'
     button.classList.add('change-button')
     button.id = 'change'
+    
     if(isYearlyAdds){
         h3.textContent = `${planname}(Yearly)`
     }else{
@@ -253,6 +275,7 @@ function FinishingUp(){
     }else{
         costh3.innerText = `$${planCost}/mo`
     }
+    
     divPlan.classList.add('finishingUp-Plan')
     div.appendChild(h3)
     div.appendChild(button)
@@ -267,6 +290,7 @@ function FinishingUp(){
         mainButtons.removeChild(main4)
         nextButton.textContent = "Next Step";
     })
+    
     addOns.forEach((items) =>{
         if((items.yearChecker === 'yr' && isYearlyAdds) || (items.yearChecker === 'mo' && !isYearlyAdds)){
         const div = document.createElement('div')
@@ -291,6 +315,7 @@ function FinishingUp(){
         card.appendChild(div)
     }
     })             
+    
     const divTotal = document.createElement('div')
     const span = document.createElement('span')
     const span2 = document.createElement('span')
@@ -313,35 +338,46 @@ function FinishingUp(){
 function changeHTML4(){
     step3.classList.remove('active')
     step4.classList.add('active')
+    
     mainHeading.textContent = "Finishing up"
     mainspan.textContent = "Double-check everthing looks OK before confirming."
     mainButtons.innerHTML = ""
+    
     const div = document.createElement('div')
     div.classList.add('main4')
-    div.appendChild(FinishingUp());
-    nextButton.textContent = "Confirm";
+    
     nextButton.classList.add("ConfirmButtonHover")
+    nextButton.textContent = "Confirm";
+    
+    div.appendChild(FinishingUp());
     mainButtons.append(div)
 }
 
+// Step 5
+
 function changeHTML5(){
+   
     const div = document.createElement('div')
     div.classList.add('thankuPage')
+    
     const img = document.createElement('img')
     const h1 = document.createElement('h1')
     const span = document.createElement('span')
+    const buttonsDiv = document.getElementsByClassName('main-next-button')[0]
+    
     img.src = `./assets/images/icon-thank-you.svg`
     h1.textContent = 'Thank you!'
     span.textContent = 'Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.'
+    
     mainButtons.innerHTML = ""
     mainspan.innerHTML = ""
     mainHeading.innerHTML = ""
-    const buttonsDiv = document.getElementsByClassName('main-next-button')[0]
     buttonsDiv.innerHTML = ""
+    
     div.appendChild(img)
     div.appendChild(h1)
     div.appendChild(span)
-   mainButtons.appendChild(div)
+    mainButtons.appendChild(div)
 }
 
 
