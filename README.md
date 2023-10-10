@@ -2,6 +2,22 @@
 
 This project is a multi-step form implemented using HTML, CSS, and JavaScript DOM. A multi-step form is an efficient way to break down a lengthy form into smaller, more manageable sections, making it easier for users to complete. This README file provides an overview of the project, its structure, and how to use and customize it.
 
+
+## ScreenShots
+![](./ScreenShots/Screenshot%20from%202023-10-09%2019-58-59.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2019-59-10.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-18-56.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-19-04.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-19-12.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-19-19.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-19-47.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-19-56.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-20-28.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-20-40.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-20-45.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-20-52.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-21-27.png)
+![](./ScreenShots/Screenshot%20from%202023-10-09%2023-21-31.png)
 ## Project Structure
 
 The project is organized into the following main files and directories:
@@ -53,6 +69,9 @@ Here are some key customization options you can consider:
 - **Styling**: Adjust the CSS in the `main.css` file to match your project's branding and design guidelines.
 
 
+## What I learned:
+   Know more about JS DOM and some new styling properties in CSS 
+
 ## Project Deploy
 
 Our Project is hosted on:
@@ -61,6 +80,8 @@ Our Project is hosted on:
 - [Vercel](https://multi-step-form-topaz-three.vercel.app/)
 
 
+## Author
+   [GitHub](https://github.com/sanjeetchahal2002)
 
 
 
